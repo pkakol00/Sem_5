@@ -24,7 +24,7 @@ def compute_transition_function(P, Sigma):
       delta[(q, a)] = k
   return lambda q, a: delta.get((q, a), 0) 
 
-def match(text, pattern):
+def match(text: str, pattern: str) -> list:
   transition_function = compute_transition_function(pattern, set(pattern))
   return finite_automaton_matcher(text, transition_function, len(pattern))
 
