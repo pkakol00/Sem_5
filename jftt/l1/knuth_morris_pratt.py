@@ -24,9 +24,9 @@ def KMP_matcher(text: str, pattern: str) -> list:
       q = pi[q - 1]
     if pattern[q] == text[i]:
       q += 1
-    if q == m - 1:
-      res.append(i - m + 2)
-      q = pi[q]
+    if q == m:
+      res.append(i - m + 1)
+      q = pi[q - 1]
   return res
 
 if __name__ == "__main__":
