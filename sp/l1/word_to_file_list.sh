@@ -31,7 +31,7 @@ do_counting() {
   for word in ${res}; do
     echo "$word :"
     # grep -lr "${word}" "$working_directory"
-    for file in $(grep -rl "$word" "$working_directory"); do
+    for file in $(grep -rlw "$word" "$working_directory"); do
       echo -e "\t$file"
     done
   done
