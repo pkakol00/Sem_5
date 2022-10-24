@@ -1,0 +1,8 @@
+# ignore objects and archives, anywhere in the tree.
+*.[oa]
+# ignore files with no extension
+*
+!/**/
+!*.*
+# ignore zips
+*.zip
