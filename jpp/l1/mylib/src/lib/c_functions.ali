@@ -1,0 +1,79 @@
+V "GNAT Lib v10"
+A -gnatA
+A -fPIC
+A -mtune=generic
+A -march=x86-64
+P SL ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_LOCAL_ALLOCATORS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U c_functions%b		c_functions.adb		026d96e8 NE OO PK IL
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W mylib%s		mylib.adb		mylib.ali
+
+U c_functions%s		c_functions.ads		449dc5e7 EE NE OO PK IL
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D c_functions.ads	20221031104131 10bcd47c c_functions%s
+D c_functions.adb	20221031095753 526fe213 c_functions%b
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D i-c.ads		20210408115627 5421119b interfaces.c%s
+D mylib.ads		20221030192953 149fb11c mylib%s
+D system.ads		20210408115627 4635ec04 system%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+G a e
+G c Z s b [c_factorial c_functions 4 12 none]
+G c Z s b [c_gcd c_functions 10 12 none]
+G c Z s b [c_solve_equation c_functions 23 12 none]
+G c Z s s [c_sollutionIP c_functions 16 8 none]
+G r c none [c_factorial c_functions 4 12 none] [factorial mylib 2 12 none]
+G r c none [c_gcd c_functions 10 12 none] [gcd mylib 4 12 none]
+G r c none [c_solve_equation c_functions 23 12 none] [solve mylib 19 12 none]
+X 3 c_functions.ads
+3K9*c_functions 28l5 28e16 4|4b14 27l5 27t16
+4V12*c_factorial{6|35I9} 4>24 4|5b12 8l7 8t18
+4i24 i{6|35I9} 4|5b24 7r40
+10V12*c_gcd{6|35I9} 10>18 10>26 4|10b12 13l7 13t12
+10i18 a{6|35I9} 4|10b18 12r34
+10i26 b{6|35I9} 4|10b26 12r46
+16R8*c_sollution 20e13 21r38 4|21r20 23r20
+17i5*correct{6|35I9}
+18i5*x{6|35I9}
+19i5*y{6|35I9}
+21P8*c_sollution_ptr(16R8) 23r60 4|15r60 17r12
+23V12*c_solve_equation{21P8} 23>29 23>37 23>45 4|15b12 26l7 26t23
+23i29 a{6|35I9} 4|15b29 19r32
+23i37 b{6|35I9} 4|15b37 19r44
+23i45 c{6|35I9} 4|15b45 19r56
+X 4 c_functions.adb
+16r5 res{7|6R8} 19m5 20r9 21r45 21r57
+17p5 c_res{3|21P8} 21m7 23m7 25r12
+X 5 interfac.ads
+38K9*Interfaces 3|1r6 1r24 4|1r6 1r24 5|184e15
+X 6 i-c.ads
+18K20*C 3|1w17 1r35 4|1w17 1r35 6|230e17
+35I9*int<integer> 3|4r27 4r39 10r21 10r29 10r41 17r14 18r8 19r8 23r32 23r40
+. 23r48 4|5r27 5r39 7r12 10r21 10r29 10r41 12r12 15r32 15r40 15r48 21r33
+. 21r41 21r53 23r33 23r41 23r49
+X 7 mylib.ads
+1K9*mylib 4|2w6 7r16 12r16 16r10 19r12 7|22e10
+2V12*Factorial{integer} 4|7s22
+4V12*GCD{integer} 4|12s22
+6R8*Pair 4|16r16 7|10e13
+7b5*isGoodSolution{boolean} 4|20r13
+8i5*x{integer} 4|21r49
+9i5*y{integer} 4|21r61
+19V12*Solve{6R8} 4|19s18
+

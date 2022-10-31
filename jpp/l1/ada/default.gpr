@@ -1,0 +1,12 @@
+project Default is
+  for Languages use ("ada", "c");
+
+  type Mode_Type is ("rec", "iter", "c_wrapper");
+  Mode : Mode_Type := "c_wrapper";
+
+  -- for Main use ("greet");
+  for Source_Dirs use ("src", "src/" & Mode);
+  -- for Source_Dirs use ("src", "src/" & Mode);
+
+  for Object_Dir use "out";
+end Default;

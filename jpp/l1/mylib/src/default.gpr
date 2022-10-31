@@ -1,0 +1,14 @@
+project Default is
+  type Mode_Type is ("rec", "iter");
+  Mode : Mode_Type := "iter";
+
+  for Source_Dirs use ("./", "./" & Mode);
+   for Object_Dir use "obj";
+   for Library_Name use "mylibada";
+   for Library_Dir use "lib";
+   for Library_Kind use "relocatable";
+   for Library_Standalone use "encapsulated";
+   for Library_Auto_Init use "true";
+   for Library_Interface use ("c_functions", "mylib");
+
+end Default;

@@ -1,0 +1,6 @@
+build/*
+mylib/bin/*
+mylib/src/obj/*
+
+ada/out/*
+ada/src/c_wrapper/*

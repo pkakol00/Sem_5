@@ -1,0 +1,93 @@
+V "GNAT Lib v10"
+A -gnatA
+A -fPIC
+A -mtune=generic
+A -march=x86-64
+P SL ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IO
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U mylib%b		mylib.adb		abf5aed9 NE OO PK IL
+W ada%s			ada.ads			ada.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+U mylib%s		mylib.ads		149fb11c EE NE OO PK IL
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-ioexce.ads		20210408115627 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-textio.ads		20210408115627 aef4d56d ada.text_io%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D i-cstrea.ads		20210408115627 e53d8b8e interfaces.c_streams%s
+D mylib.ads		20221030192953 149fb11c mylib%s
+D mylib.adb		20221030193029 119ecaa8 mylib%b
+D system.ads		20210408115627 4635ec04 system%s
+D s-crtl.ads		20210408115627 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-ficobl.ads		20210408115627 078245e4 system.file_control_block%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20210408115627 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [factorial mylib 2 12 none]
+G c Z s b [gcd mylib 4 12 none]
+G c Z s b [exteuclidian mylib 12 12 none]
+G c Z s b [solve mylib 19 12 none]
+G c Z s b [version mylib 21 13 none]
+G c Z s s [pairIP mylib 6 8 none]
+X 1 ada.ads
+16K9*Ada 20e8 11|1r6 95r3
+X 6 a-textio.ads
+57K13*Text_IO 727e16 11|1w10 95r7
+508U14*Put_Line 11|95s15
+X 10 mylib.ads
+1K9*mylib 22l5 22e10 11|3b14 98l5 98t10
+2V12*Factorial{integer} 2>23 11|6b10 19l5 19t14
+2i23 n{integer} 11|6b21 7r17 10r7
+4V12*GCD{integer} 4>16 4>28 11|21b10 32l5 32t8
+4i16 a{integer} 11|21b14 22r18
+4i28 b{integer} 11|21b26 23r18
+6R8*Pair 10e13 19r61 11|67r59
+7b5*isGoodSolution{boolean}
+8i5*x{integer}
+9i5*y{integer}
+12V12*ExtEuclidian{integer} 13>5 14>5 15=5 16=5 11|34b10 65l5 65t17 75s8
+13i5 a{integer} 11|35b3 42r18
+14i5 b{integer} 11|36b3 43r18
+15i5 x{integer} 11|37b3 47m3 52r10 53m5
+16i5 y{integer} 11|38b3 48m3 56r10 57m5
+19V12*Solve{6R8} 19>18 19>30 19>42 11|67b10 91l5 91t10
+19i18 a{integer} 11|67b16 72r7 75r25 80r7
+19i30 b{integer} 11|67b28 72r17 75r32 85r7
+19i42 c{integer} 11|67b40 76r7 81r16 83r18 86r16 88r18
+21U13*Version 11|93b11 96l5 96t12
+X 11 mylib.adb
+7i3 x{integer} 13r12 14r20 15m7 15r12
+8i3 ack{integer} 14m7 14r14 17r12
+22i3 x{integer} 27r10 28m5 31r10
+23i3 y{integer} 26r9 28r10 29m5 29r16
+24i3 c{integer} 27m5 29r10
+40i3 x1{integer} 53r10 54m5 54r19
+41i3 y1{integer} 57r10 58m5 58r19
+42i3 a1{integer} 50r10 60r10 61m5 64r10
+43i3 b1{integer} 49r10 50r15 61r11 62m5 62r19
+44i3 q{integer} 50m5 54r15 58r15 62r15
+45i3 c{integer} 52m5 54r11 56m5 58r11 60m5 62r11
+68i3 x0{integer} 75m35 75r35 81m5 81r11 83m5 83r13 90r17
+69i3 y0{integer} 75m39 75r39 86m5 86r11 88m5 88r13 90r21
+70i3 g{integer} 75m3 76r13 81r20 83r22 86r20 88r22
+

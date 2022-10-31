@@ -1,8 +1,13 @@
 # ignore objects and archives, anywhere in the tree.
 *.[oa]
+*.so
 # ignore files with no extension
 *
 !/**/
 !*.*
 # ignore zips
 *.zip
+
+# ignore pycache files
+*.pyc
+*.pyo
