@@ -1,0 +1,6 @@
+#ignore build 
+cpp/build/*
+.vscode/*
+
+java/.vscode/*
+java/finite_field/target/*
